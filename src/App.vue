@@ -73,7 +73,7 @@ export default {
   <button @mouseover.once="onMouseOver">Botão</button>
 <br>
  <!-- keyboard event .enter só dispara quando aperta enter -->
-  <input type="text" @keyup.enter="onKeyUp"></input>
+  <input type="text" @keyup.enter="onKeyUp">
 </div>
 
 
