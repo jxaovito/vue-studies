@@ -1,7 +1,10 @@
 <script>
+import Header from './components/headerComponent.vue';
+import Alert from './components/baseAlert.vue';
 
 export default {
   name: "App",
+  components: { Header, Alert },
   data() {
     return {
       isHome: true,
@@ -43,6 +46,8 @@ export default {
   }],
   name: '',
   pageCount: 5,
+  variant: 'success',
+  text: 'Seu formulário foi enviado'
     };
   },
   beforeCreate(){
@@ -193,6 +198,21 @@ unmounted(){
 <option value="15">15</option>
 </select> <br>
 {{ pageCount }}
+
+
+<div><Header>
+  <template v-slot:title>
+    Home
+  </template>
+  <template v-slot:description>
+    <p>coaskdpo</p>
+  </template>
+</Header></div>
+
+<div>
+  <Alert :variant="variant"/>
+</div>
+
 </div>
 
 
