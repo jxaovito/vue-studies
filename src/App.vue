@@ -22,6 +22,12 @@ export default {
         this.nome = 'jon snow';
       }
       
+    },
+    onMouseOver($evt){
+        console.log('mouse over', $evt);
+    },
+    onKeyUp($evt){
+      console.log('key up', $evt);
     }
   }
 };
@@ -62,6 +68,12 @@ export default {
   type="checkbox"> Azul
   <br>
   {{ colors }}
+<br>
+ <!-- modificador de evento // event handler -->
+  <button @mouseover.once="onMouseOver">Botão</button>
+<br>
+ <!-- keyboard event .enter só dispara quando aperta enter -->
+  <input type="text" @keyup.enter="onKeyUp"></input>
 </div>
 
 
